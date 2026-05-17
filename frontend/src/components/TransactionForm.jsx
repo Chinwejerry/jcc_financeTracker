@@ -62,7 +62,9 @@ const TransactionForm = ({ onAdd }) => {
         required
       />
 
-      <button className="w-full bg-black text-white p-2">Add</button>
+      <button className="w-full bg-linear-to-r from-slate-600 via-sky-700 to-indigo-800 shadow text-white p-2">
+        Add
+      </button>
     </form>
   );
 };

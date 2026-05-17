@@ -37,12 +37,12 @@ const MonthlyChart = ({ transactions }) => {
       {
         label: "Income",
         data: incomeData,
-        backgroundColor: "#16a34a",
+        backgroundColor: "#805fcf",
       },
       {
         label: "Expense",
         data: expenseData,
-        backgroundColor: "#dc2626",
+        backgroundColor: "#c73840",
       },
     ],
   };

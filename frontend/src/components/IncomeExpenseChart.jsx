@@ -28,7 +28,7 @@ const IncomeExpenseChart = ({ transactions }) => {
     datasets: [
       {
         data: [income, expense],
-        backgroundColor: ["#16a34a", "#dc2626"],
+        backgroundColor: ["#805fcf", "#c73840"],
       },
     ],
   };
