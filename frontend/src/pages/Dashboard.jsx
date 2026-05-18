@@ -54,12 +54,7 @@ const Dashboard = () => {
   const handleDelete = async (id) => {
     if (!window.confirm("Delete this transaction?")) return;
 
-    await fetch(`${API_URL}/transactions/${id}`, {
-      method: "DELETE",
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
+    await apiRequest(`/transactions/${id}`, "DELETE");
 
     setTransactions((prev) => prev.filter((t) => t._id !== id));
   };
@@ -68,16 +63,13 @@ const Dashboard = () => {
   };
 
   const handleSaveEdit = async (updatedTx) => {
-    const res = await fetch(`${API_URL}/transactions/${updatedTx._id}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-      body: JSON.stringify(updatedTx),
-    });
+    const data = await apiRequest(
+      `/transactions/${updatedTx._id}`,
+      "PUT",
+      updatedTx,
+    );
 
-    const data = await res.json();
+    //  const data = await res.json();
 
     setTransactions((prev) => prev.map((t) => (t._id === data._id ? data : t)));
 

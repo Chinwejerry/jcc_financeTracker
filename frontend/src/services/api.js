@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5001/api";
+const API_URL = "https://jcc-financetracker.onrender.com";
 
 export const apiRequest = async (endpoint, method = "GET", body) => {
   const user = JSON.parse(localStorage.getItem("user"));
