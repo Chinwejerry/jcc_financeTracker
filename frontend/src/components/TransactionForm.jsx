@@ -10,7 +10,7 @@ const TransactionForm = ({ onAdd }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const newTransaction = await apiRequest("/transactions", "POST", {
+    const newTransaction = await apiRequest("/api/transactions", "POST", {
       type,
       amount: Number(amount),
       category,

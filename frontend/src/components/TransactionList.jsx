@@ -2,7 +2,7 @@ import { apiRequest } from "../services/api";
 
 const TransactionList = ({ transactions, onDelete }) => {
   const handleDelete = async (id) => {
-    await apiRequest(`/transactions/${id}`, "DELETE");
+    await apiRequest(`/api/transactions/${id}`, "DELETE");
     onDelete(id);
   };
 

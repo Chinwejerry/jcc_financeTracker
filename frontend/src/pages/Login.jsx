@@ -11,7 +11,7 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const data = await apiRequest("/auth/login", "POST", {
+    const data = await apiRequest("/api/auth/login", "POST", {
       email,
       password,
     });
